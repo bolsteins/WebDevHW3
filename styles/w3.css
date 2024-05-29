@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: rgb(251, 251, 246);
     color: #333;
 }
 
@@ -40,7 +40,7 @@ h1 {
 .controls button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #007BFF;
+    background-color: #007bffc1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -74,18 +74,9 @@ h1 {
     color: white;
 }
 
-#container .fizz {
-    background-color: #32cd32;
-    color: white;
-}
-
-#container .buzz {
-    background-color: #1e90ff;
-    color: white;
-}
 
 #container .num {
-    background-color: #eee;
+    background-color: #8ecae6;
     color: #333;
 }
 
@@ -111,4 +102,3 @@ h1 {
     object-fit: cover;
     border-radius: 5px;
 }
-
