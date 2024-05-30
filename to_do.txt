@@ -2,4 +2,4 @@
 // 1. Kad hovero uz boxiem parādās nosakums
 // 2. Lai katrā rindā parādas 10 boxi? lai nākamajā nekarajā viens
 // 3. lejuplādēt attēlus un pievienot kā failus kodā, nevis kā saites
-// 4. 
+// 4. Mainīt id 
