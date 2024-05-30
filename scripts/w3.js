@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.className = 'fizzbuzz';
                 div.innerText = 'FizzBuzz';
 
-                hoverText.innerText = 'FizzBuzz';
+                
 
             } else if (i % fizzValue === 0) {
                 div.className = 'fizz';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.className = 'num';
                 div.innerText = i;
 
-                hoverText.innerText = i;
+                
             }
             
             div.appendChild(hoverText);
