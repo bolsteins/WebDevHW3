@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const fizzImageUrl = 'https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ec972080-ce09-4114-86ba-0a7ecc151dcd/width=450/00055-1884010075.jpeg'
 
     const createDivs = () => {
+    
         container.innerHTML = '';
+    
+
         const min = parseInt(inputMin.value, 10) || 1;
         const max = parseInt(inputMax.value, 10) || 100;
         const fizzValue = parseInt(inputFizz.value, 10) || 3;
@@ -22,9 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const div = document.createElement('div');
             div.id = `div_${i}`;
 
+            const hoverText = document.createElement('div');
+            hoverText.className = 'hover-text';
+
             if (i % fizzValue === 0 && i % buzzValue === 0) {
                 div.className = 'fizzbuzz';
                 div.innerText = 'FizzBuzz';
+
+                hoverText.innerText = 'FizzBuzz';
+
             } else if (i % fizzValue === 0) {
                 div.className = 'fizz';
                 const img = document.createElement('img');
@@ -32,23 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.alt = 'Fizz'
                 // div.innerText = 'Fizz';
                 div.appendChild(img);
+
+                hoverText.innerText = 'Fizz';
+
             } else if (i % buzzValue === 0) {
                 div.className = 'buzz';
                 const img = document.createElement('img');
                 img.src = buzzImageUrl; // use URL
                 img.alt = 'Buzz';
                 div.appendChild(img);
+
+                hoverText.innerText = 'Buzz';
+
             } else {
                 div.className = 'num';
                 div.innerText = i;
-            }
 
+                hoverText.innerText = i;
+            }
+            
+            div.appendChild(hoverText);
+            
             container.appendChild(div);
         }
     };
 
     generateBtn.addEventListener('click', createDivs);
-    clearBtn.addEventListener('click', () => container.innerHTML = '');
+    clearBtn.addEventListener('click', () => {
+        container.innerHTML = '';
+    });
 
     // Set default values and generate divs on page load
     inputMin.value = 1;
