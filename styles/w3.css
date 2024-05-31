@@ -1,4 +1,4 @@
-html, body {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
@@ -54,8 +54,22 @@ h1 {
 
 #container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
     gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+@media (min-width: 600px) {
+    #container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    #container {
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
 
 #container div {
@@ -63,7 +77,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 115px;
+    width: 105px;
     height: 150px;
     font-size: 1.5em;
     border-radius: 5px;
@@ -101,12 +115,6 @@ h1 {
     border-radius: 5px;
 }
 
-@media (max-width: 576px) {
-    #container {
-        grid-template-columns: 1fr, 1fr, 1fr;
-    }
-}
-
 .hover-text {
     display: flex;
     position: absolute;
@@ -126,4 +134,3 @@ h1 {
     opacity: 1;
     
 }
-
